@@ -1,0 +1,50 @@
+voting application
+what??
+a fuunctionalitty where users can give vote to the given set of candidates
+
+modesl?
+routes?
+
+1. user sign in/sign up
+2. see the list of candidates
+3. vote one of the candidates
+4. there is a route which shows the list of candidates and there live votes counts sorted by there vote count 
+5. user data must contain their onne unique goverment id proof name: adhar card number
+6. there should be one admin who can only maintain the table of candidates and he cant able to vote at all
+7. user can change there password.
+8. user can login only  with there adhar card number and password
+9. admin cant vote at all
+
+
+-----------------------------------------------------------------
+
+
+
+Routes.
+
+user authentication:
+/signup: post - create a new uuser account
+/login: post - log in to an existiing  account
+
+
+voting:
+/candidates: get - get the list of candidates
+/vote/:candidateId: post - vote for a specific candidate
+
+
+vote counts:
+/vote/counts: get - get the list of candidates sorted by there vote counts.
+
+
+
+user profile:
+/profile: get - get the user profile information
+/profile/password : put - change the users password
+
+
+
+
+admin candidates management :
+/candidates : post - create a new candidate
+/candidates/:candidateId :  put - update an existiing  candidate
+/candidates/:candidateId :  delete - delete a candidate from the list
